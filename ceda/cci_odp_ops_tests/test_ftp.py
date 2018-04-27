@@ -18,6 +18,7 @@ class FtpTestCase(unittest.TestCase):
     FTP_SERVER_ADDR = 'anon-ftp.ceda.ac.uk'
     TOP_DIR = 'neodc'
     CCI_DIR = os.path.join(TOP_DIR, 'esacci')
+    SEA_LEVEL_README_FILEPATH = os.path.join(CCI_DIR, 'sea_level', '00README')
     
     def setUp(self):
         super(FtpTestCase, self).setUp()
@@ -35,3 +36,12 @@ class FtpTestCase(unittest.TestCase):
     def test_02_list_cci_dir(self):   
         self.ftp_client.cwd(self.__class__.CCI_DIR)
         print(self.ftp_client.nlst())
+        
+    def test_03_get_sea_level_readme(self): 
+        import io  
+        readme_txt = io.BytesIO()
+        self.ftp_client.retrbinary(
+            'RETR {}'.format(self.__class__.SEA_LEVEL_README_FILEPATH), 
+            readme_txt.write)
+        
+        print(readme_txt.getvalue())
