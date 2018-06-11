@@ -21,7 +21,7 @@ except ImportError:
 
 setup(
     name =              'cci-odp-ops-tests-ftp',
-    version =           '0.1.0',
+    version =           '0.1.1',
     description =       'Test CCI Open Data Portal FTP Service test',
     long_description =  '''Tests based on unit test framework
 ''',
