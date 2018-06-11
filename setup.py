@@ -30,7 +30,7 @@ setup(
     maintainer =        'Philip Kershaw',
     maintainer_email =  'Philip.Kershaw@stfc.ac.uk',
     platforms =         ['POSIX', 'Linux', 'Windows'],
-    install_requires =  ['requests', 'Pydap', 'nagiosplugin'],
+    install_requires =  ['nagiosplugin'],
     license =           __license__,
     test_suite =        '',
     packages =          find_packages(),
