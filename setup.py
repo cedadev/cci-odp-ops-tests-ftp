@@ -57,7 +57,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'cci_odp_tds_opendap_test = '
+            'cci_odp_ftp_test = '
             'ceda.cci_odp_ops_tests.nagios_test.ftp_test:main',
         ],
     },

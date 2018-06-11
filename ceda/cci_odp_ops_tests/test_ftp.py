@@ -35,7 +35,9 @@ class FtpTestCase(unittest.TestCase):
         
     def test_02_list_cci_dir(self):   
         self.ftp_client.cwd(self.__class__.CCI_DIR)
-        print(self.ftp_client.nlst())
+        self.assertGreater(len(self.ftp_client.nlst()), 0,
+                            'Got empty dir listing for {!r}'.format(
+                                self.__class__.CCI_DIR))
         
     def test_03_get_sea_level_readme(self): 
         import io  
@@ -44,4 +46,6 @@ class FtpTestCase(unittest.TestCase):
             'RETR {}'.format(self.__class__.SEA_LEVEL_README_FILEPATH), 
             readme_txt.write)
         
-        print(readme_txt.getvalue())
+        self.assertGreater(len(readme_txt.getvalue()), 0, 
+                           'Got zero length readme file {!r}'.format(
+                               self.__class__.SEA_LEVEL_README_FILEPATH))
