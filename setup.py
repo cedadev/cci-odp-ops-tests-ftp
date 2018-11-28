@@ -20,8 +20,7 @@ setup(
     name =              'cci-odp-ops-tests-ftp',
     version =           '0.1.0',
     description =       'Test CCI Open Data Portal FTP Service test',
-    long_description =  '''Tests based on unit test framework
-''',
+    long_description =  '''Tests based on unit test framework''',
     author =            'Philip Kershaw',
     author_email =      'Philip.Kershaw@stfc.ac.uk',
     maintainer =        'Philip Kershaw',
