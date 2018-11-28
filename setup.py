@@ -3,7 +3,7 @@
 """
 __author__ = "P J Kershaw"
 __date__ = "09/11/17"
-__copyright__ = "(C) 2018 Science and Technology Facilities Council"
+__copyright__ = "Copyright 2018 United Kingdom Research and Innovation"
 __license__ = """BSD - See LICENSE file in top-level directory"""
 __contact__ = "Philip.Kershaw@stfc.ac.uk"
 
@@ -18,7 +18,7 @@ except ImportError:
 
 setup(
     name =              'cci-odp-ops-tests-ftp',
-    version =           '0.1.1',
+    version =           '0.2.0',
     description =       'Test CCI Open Data Portal FTP Service test',
     long_description =  '''Tests based on unit test framework''',
     author =            'Philip Kershaw',
