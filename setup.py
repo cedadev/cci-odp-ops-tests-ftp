@@ -1,14 +1,11 @@
 #!/usr/bin/env python
 """Distribution Utilities setup program for CCI TDS OPeNDAP ops test package
-
-Contrail Project
 """
 __author__ = "P J Kershaw"
 __date__ = "09/11/17"
 __copyright__ = "(C) 2018 Science and Technology Facilities Council"
 __license__ = """BSD - See LICENSE file in top-level directory"""
 __contact__ = "Philip.Kershaw@stfc.ac.uk"
-__revision__ = '$Id$'
 
 # Bootstrap setuptools if necessary.
 try:
@@ -34,6 +31,11 @@ setup(
     license =           __license__,
     test_suite =        '',
     packages =          find_packages(),
+    package_data={
+        'ceda/cci_odp_ops_tests': [
+            'LICENSE',
+        ],
+    },
     classifiers = [
         'Development Status :: 5 - Production/Stable',
         'Environment :: Console',
