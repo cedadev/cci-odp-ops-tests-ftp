@@ -8,7 +8,7 @@ __license__ = """BSD - See LICENSE file in top-level directory"""
 __contact__ = "Philip.Kershaw@stfc.ac.uk"
 __revision__ = '$Id$'
 from ceda.unittest_nagios_wrapper.script import nagios_script
-from ceda.cci_odp_ops_tests.test_tds_opendap import FtpTestCase
+from ceda.cci_odp_ops_tests.test_ftp import FtpTestCase
 
 
 def main():

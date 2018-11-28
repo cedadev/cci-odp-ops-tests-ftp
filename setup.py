@@ -18,7 +18,7 @@ except ImportError:
 
 setup(
     name =              'cci-odp-ops-tests-ftp',
-    version =           '0.1.0',
+    version =           '0.1.1',
     description =       'Test CCI Open Data Portal FTP Service test',
     long_description =  '''Tests based on unit test framework''',
     author =            'Philip Kershaw',
@@ -26,7 +26,7 @@ setup(
     maintainer =        'Philip Kershaw',
     maintainer_email =  'Philip.Kershaw@stfc.ac.uk',
     platforms =         ['POSIX', 'Linux', 'Windows'],
-    install_requires =  ['requests', 'Pydap', 'nagiosplugin'],
+    install_requires =  ['nagiosplugin'],
     license =           __license__,
     test_suite =        '',
     packages =          find_packages(),
@@ -58,7 +58,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'cci_odp_tds_opendap_test = '
+            'cci_odp_ftp_test = '
             'ceda.cci_odp_ops_tests.nagios_test.ftp_test:main',
         ],
     },
