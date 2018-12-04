@@ -15,7 +15,9 @@ from ftplib import FTP
 class FtpTestCase(unittest.TestCase):
     '''Unit test case for testing ESA CCI Open Data Portal FTP Service'''
 
-    FTP_SERVER_ADDR = 'anon-ftp.ceda.ac.uk'
+    FTP_SERVER_ADDR = os.environ.get('CCI_ODP_FTP_ADDR',
+                                     'anon-ftp.ceda.ac.uk')
+
     TOP_DIR = 'neodc'
     CCI_DIR = os.path.join(TOP_DIR, 'esacci')
     SEA_LEVEL_README_FILEPATH = os.path.join(CCI_DIR, 'sea_level', '00README')
